@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>অ্যাডমিন লগইন — FUTPAT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body.login-body {
+            background: #f0f4f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(6, 38, 74, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-card h2 {
+            color: #06264a;
+            margin-bottom: 5px;
+        }
+
+        .login-card p {
+            color: #718096;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .login-card form {
+            display: grid;
+            gap: 15px;
+            text-align: left;
+        }
+
+        .login-card label {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .login-card input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dce4ed;
+            border-radius: 8px;
+            outline-color: #ff7900;
+            margin-top: 5px;
+        }
+
+        .login-card .btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body class="login-body">
+    <div class="login-card">
+        <h2>অ্যাডমিন প্যানেল লগইন</h2>
+        <p>পাসওয়ার্ড দিয়ে সিস্টেমে প্রবেশ করুন</p>
+        <form id="login-form">
+            <label>ইমেইল / ইউজারনেম <input type="text" id="username" value="admin@futpat.com" required></label>
+            <label>পাসওয়ার্ড <input type="password" id="password" placeholder="admin123" required></label>
+            <button type="submit" class="btn">লগইন করুন</button>
+        </form>
+        <p style="margin-top:15px; font-size:12px; color:#a0aec0;">পাসওয়ার্ড: <b>admin123</b></p>
+    </div>
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (document.getElementById("password").value === "admin123") {
+                localStorage.setItem("futpat_logged", "true");
+                window.location.href = "admin.html";
+            } else {
+                alert("ভুল পাসওয়ার্ড! সঠিক পাসওয়ার্ড দিন (admin123)।");
+            }
+        });
+    </script>
+</body>
+
+</html>

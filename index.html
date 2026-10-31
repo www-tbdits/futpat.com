@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUTPAT — সবকিছু এক জায়গায়</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="topbar wrap">
+
+      <!-- BRAND LOGO -->
+      <a class="brand" href="index.html">
+        <span class="brand-mark">🛒</span>
+        <span>
+          <b>FUT<span>PAT</span></b>
+          <small>সবকিছু এখন এক প্ল্যাটফর্মে</small>
+        </span>
+      </a>
+      </a>
+
+      <!-- SEARCH -->
+      <form class="search" action="shop.html">
+        <input type="search" name="q" placeholder="আপনি কী খুঁজছেন?" aria-label="পণ্য খুঁজুন">
+        <button type="submit" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+
+      <!-- HEADER LINKS -->
+      <div class="head-links">
+
+        <a href="admin.html" title="Admin Panel">
+          <i class="fa-solid fa-user-shield"></i>
+          <span>অ্যাডমিন</span>
+        </a>
+
+        <a href="wishlist.html">
+          <i class="fa-regular fa-heart"></i>
+          পছন্দের তালিকা
+          <em id="wishlist-count">০</em>
+        </a>
+
+        <a href="cart.html" title="Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>কার্ট</span>
+          <em id="cart-count">০</em>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+
+      <div class="wrap nav-inner">
+
+        <a class="active" href="index.html">
+          <i class="fa-solid fa-house"></i>
+          হোম
+        </a>
+
+        <a href="shop.html">
+          <i class="fa-solid fa-layer-group"></i>
+          সব ক্যাটাগরি
+        </a>
+
+        <a href="shop.html?deal=1">
+          <i class="fa-solid fa-tags"></i>
+          বিশেষ অফার
+        </a>
+        <a href="shop.html?popular=1">
+          <i class="fa-solid fa-fire"></i>
+          সেরা বিক্রি
+        </a>
+
+        <a href="#footer">
+          <i class="fa-solid fa-users"></i>
+          আমাদের সম্পর্কে
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">
+          <i class="fa-solid fa-bolt"></i>
+          সেরা অফার
+        </span>
+        <h1>
+          আপনার প্রয়োজনীয়
+          <br>
+          <strong>সবকিছু এক জায়গায়!</strong>
+        </h1>
+        <p>
+          ফ্যাশন, ইলেকট্রনিক্স, হোম ডেকর, বিউটি, গ্যাজেট,
+          খেলাধুলা
+          <br>
+          এবং আরও অনেক কিছু — এখন FUTPAT-এ!
+        </p>
+        <a class="btn" href="shop.html">
+          এখনই শপিং করুন
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- HERO IMAGE -->
+      <div class="hero-art">
+        <div class="sale-sticker">
+          বিশেষ ছাড়
+          <br>
+          <strong>২০% পর্যন্ত</strong>
+        </div>
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85"
+          alt="বিশেষ পণ্য">
+      </div>
+
+      <!-- HERO FEATURES -->
+      <div class="hero-perks">
+        <span>
+          <i class="fa-solid fa-shield-halved"></i>
+          নিরাপদ কেনাকাটা
+        </span>
+        <span>
+          <i class="fa-solid fa-truck-fast"></i>
+          দ্রুত ডেলিভারি
+        </span>
+        <span>
+          <i class="fa-solid fa-headset"></i>
+          ২৪/৭ সাপোর্ট
+        </span>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="wrap section">
+      <div class="section-head">
+        <h2>
+          <i class="fa-solid fa-layer-group"></i>
+          ক্যাটাগরি সমূহ
+        </h2>
+        <a href="shop.html">
+          সব ক্যাটাগরি দেখুন
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+      <div id="home-categories" class="category-grid"></div>
+    </section>
+
+    <!-- POPULAR PRODUCTS -->
+    <section class="wrap section">
+      <div class="section-head">
+
+        <h2>
+          <i class="fa-fire"></i>
+          🔥জনপ্রিয় পণ্যসমূহ
+        </h2>
+
+        <a class="btn small" href="shop.html">
+          সব পণ্য দেখুন
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+      <div id="home-products" class="product-grid"></div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="wrap newsletter">
+      <div>
+        <h2>
+          FUTPAT-এর সাথে থাকুন
+        </h2>
+        <p>
+          নতুন পণ্য ও বিশেষ অফারের খবর সবার আগে পান।
+        </p>
+      </div>
+      <form onsubmit="event.preventDefault();alert('ধন্যবাদ! আপনি তালিকায় যুক্ত হয়েছেন।')">
+        <input type="email" placeholder="আপনার ইমেইল ঠিকানা" required>
+        <button class="btn" type="submit">
+          <i class="fa-solid fa-paper-plane"></i>
+          সাবস্ক্রাইব
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="footer">
+    <div class="wrap footer-grid">
+
+      <!-- FOOTER BRAND -->
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand-mark">🛒</span>
+          <span>
+            <span>
+              <b>FUT<span>PAT</span></b>
+              <small>সবকিছু এখন এক প্ল্যাটফর্মে</small>
+            </span>
+        </a>
+        <p>
+          আপনার দৈনন্দিন কেনাকাটার বিশ্বস্ত ঠিকানা।
+        </p>
+      </div>
+
+      <!-- QUICK LINKS -->
+      <div>
+        <h3>দ্রুত লিংক</h3>
+        <a href="shop.html">সব পণ্য</a>
+        <a href="cart.html">শপিং কার্ট</a>
+        <a href="admin.html">অ্যাডমিন প্যানেল</a>
+      </div>
+
+      <!-- SERVICES -->
+      <div>
+        <h3>আমাদের সেবা</h3>
+        <p>সারা দেশে ডেলিভারি</p>
+        <p>নিরাপদ পেমেন্ট</p>
+        <p>সহজ রিটার্ন</p>
+
+      </div>
+
+
+      <!-- CONTACT -->
+      <div>
+        <h3>যোগাযোগ</h3>
+        <p>09638665205</p>
+        <p>support@futpat.com</p>
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="copyright">
+
+      <i class="fa-regular fa-copyright"></i>
+      2026 FUTPAT | All Rights Reserved.
+
+    </div>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

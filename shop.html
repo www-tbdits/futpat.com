@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>সব পণ্য — FUTPAT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="sub-header">
+        <div class="wrap sub-head"><a class="brand" href="index.html"><span
+                    class="brand-mark">🛒</span><span><b>FUT<span>PAT</span></b><small>সবকিছু এখন এক
+                        প্ল্যাটফর্মে</small></span></a>
+            <form class="search" action="shop.html"><input name="q" placeholder="আপনি কী খুঁজছেন?"><button>⌕</button>
+            </form><a class="cart-link" href="cart.html">🛒 কার্ট <em id="cart-count">০</em></a>
+        </div>
+    </header>
+    <main class="wrap shop-layout">
+        <aside class="filters">
+            <h2>পণ্য খুঁজুন</h2><input id="shop-search" placeholder="পণ্যের নাম লিখুন">
+            <h3>ক্যাটাগরি</h3>
+            <div id="shop-categories"></div>
+            <h3>দামের সীমা</h3>
+            <div class="price-filter"><input id="max-price" type="number" placeholder="সর্বোচ্চ দাম"><button
+                    class="btn small" id="apply-filter">প্রয়োগ</button></div><button class="text-btn"
+                id="clear-filter">সব ফিল্টার মুছুন</button>
+        </aside>
+        <section class="shop-main">
+            <div class="section-head">
+                <div>
+                    <h1>আমাদের সকল পণ্য</h1>
+                    <p id="result-count" class="muted"></p>
+                </div><select id="sort-products">
+                    <option value="default">সাজান: ডিফল্ট</option>
+                    <option value="low">দাম: কম থেকে বেশি</option>
+                    <option value="high">দাম: বেশি থেকে কম</option>
+                    <option value="name">নাম অনুযায়ী</option>
+                </select>
+            </div>
+            <div id="shop-products" class="product-grid"></div>
+        </section>
+    </main>
+    <footer class="copyright">2026 FUTPAT | All Rights Reserved.</footer>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
